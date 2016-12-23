@@ -40,11 +40,9 @@ class Worker(object):
 
 
 if __name__ == "__main__":
+    from argparse import ArgumentParser
 
-    from optparse import OptionParser
-
-    parser=OptionParser()
-    parser.add_option("-r", '', "--run", dest="run_type", action="store", help="任务运行环境[test或online]")
-
-    options_, args_ = parser.parse_args()
+    parse = ArgumentParser()
+    parse.add_argument('-f', '--foo', action="store", dest=func, help=foo help)
+    args = parse.parse_args()
 

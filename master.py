@@ -42,10 +42,8 @@ class Master(object):
 
 
 if __name__ == "__main__":
-    from optparse import OptionParser
+    from argparse import ArgumentParser
 
-    parser=OptionParser()
-    parser.add_option("-r", "--run", dest="run_type", action="store", help="运行环境[test或online]")
-
-    options_, args_ = parser.parse_args()
-
+    parse = ArgumentParser()
+    parse.add_argument('-f', '--foo', action="store", dest=func, help=foo help)
+    args = parse.parse_args()
