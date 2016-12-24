@@ -17,7 +17,7 @@ class KnnAlgo(object):
         
     def __read_sample(self):
         with open(self.sample_file, "rb") as fid:
-            self.sample = np.fromfile(fid, sep=self.sep)
+            self.sample = np.loadtxt(fid, sep=self.sep)
 
     def dist_euclid(self):
         pass
