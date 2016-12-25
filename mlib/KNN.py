@@ -7,7 +7,7 @@ from collections import defaultdict
 
 class KnnAlgo(object):
     """
-    @sample_file, feat1, feat2, feat3, label
+    @sample_file: feat1, feat2, feat3, label
     """
     def __init__(self, sample_file, sep=','):
         self.sample_file = sample_file
