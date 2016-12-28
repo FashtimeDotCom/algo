@@ -37,10 +37,10 @@ class MongoOpt(object):
         self.host = self.host.split(',')
     
     @retry_times(times=3, interval=0.1)
-    def mongo_update(self, collection, user_data_dict):
+    def mongo_update(self, collection, condition, update_data):
         try:
             col = self.db[collection]
-            id_ = col.update(user_data_dict)
+            id_ = col.update(condition, update_data)
             return id_
         except:
             raise Exception, traceback.format_exc()
