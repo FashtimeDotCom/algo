@@ -1,0 +1,5 @@
+1.策略
+  (timestamp, flag)-->n_count/day
+2.数据更新异步
+  data_push-->push_service.py
+  data_pull-->data_update.py
